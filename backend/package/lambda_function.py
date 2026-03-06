@@ -19,12 +19,19 @@ table = dynamodb.Table(DYNAMODB_TABLE_NAME)
 
 
 def lambda_handler(event, context):
-    """Main entry point for API Gateway requests"""
+    """Main entry point for API Gateway and Lambda Function URL requests"""
     try:
-        # Parse the request
-        http_method = event.get('httpMethod', '')
-        path = event.get('path', '')
-        body = json.loads(event.get('body', '{}')) if event.get('body') else {}
+        # Detect event type (API Gateway vs Function URL)
+        if 'requestContext' in event and 'http' in event['requestContext']:
+            # Lambda Function URL format
+            http_method = event['requestContext']['http']['method']
+            path = event['requestContext']['http']['path']
+            body = json.loads(event.get('body', '{}')) if event.get('body') else {}
+        else:
+            # API Gateway format
+            http_method = event.get('httpMethod', '')
+            path = event.get('path', '')
+            body = json.loads(event.get('body', '{}')) if event.get('body') else {}
         
         # Route the request
         if path == '/conversation/start' and http_method == 'POST':

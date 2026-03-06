@@ -1,0 +1,5 @@
+{
+  "httpMethod": "POST",
+  "path": "/conversation/message",
+  "body": "{\"sessionId\":\"sess_2960c120ffa2\",\"message\":\"I'm with my partner and we're considering IVF\"}"
+}

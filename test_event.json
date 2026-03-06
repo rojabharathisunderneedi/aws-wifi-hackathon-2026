@@ -1,0 +1,5 @@
+{
+  "httpMethod": "POST",
+  "path": "/conversation/start",
+  "body": "{\"userId\":\"user_001\",\"initialPrompt\":\"I'm thinking about starting a family in the next 2 years\"}"
+}
