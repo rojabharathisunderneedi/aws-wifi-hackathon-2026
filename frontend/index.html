@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BloomAI - Your Family Planning Journey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Full page gradient background -->
+    <div class="page-background">
+        <!-- Decorative shapes -->
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <!-- Main white container -->
+    <div class="main-container">
+        <!-- Top Navigation -->
+        <nav class="top-nav">
+            <div class="nav-logo">
+                <svg width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="14" r="5" fill="#C4B5FD" opacity="0.6"/>
+                    <circle cx="31" cy="20" r="5" fill="#BFDBFE" opacity="0.6"/>
+                    <circle cx="31" cy="28" r="5" fill="#BBF7D0" opacity="0.6"/>
+                    <circle cx="24" cy="34" r="5" fill="#C4B5FD" opacity="0.6"/>
+                    <circle cx="17" cy="28" r="5" fill="#DBEAFE" opacity="0.6"/>
+                    <circle cx="17" cy="20" r="5" fill="#C4B5FD" opacity="0.6"/>
+                    <circle cx="24" cy="24" r="6" fill="#8B5CF6"/>
+                    <circle cx="24" cy="24" r="3" fill="#7C3AED"/>
+                </svg>
+                <span class="logo-text">BloomAI</span>
+            </div>
+            <div class="nav-actions">
+                <button class="nav-button">About</button>
+                <button class="nav-button">Support</button>
+                <button class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <div class="content-wrapper" id="landingPage">
+            <!-- Left: Hero Section -->
+            <div class="hero-section">
+                <div class="hero-card">
+                    <!-- Decorative elements -->
+                    <div class="hero-decoration deco-1"></div>
+                    <div class="hero-decoration deco-2"></div>
+                    <div class="hero-decoration deco-3"></div>
+                    
+                    <div class="hero-content">
+                        <h1 class="hero-title">Your BloomAI Journey</h1>
+                        <p class="hero-subtitle">Personalised AI guidance for your family planning path. Understand your options, explore financial strategies, and make informed decisions with confidence.</p>
+                        
+                        <!-- Conversation Starters -->
+                        <div class="conversation-starters">
+                            <h3 class="starters-label">Start a conversation</h3>
+                            <div class="starter-cards">
+                                <button class="starter-card" data-prompt="I'm thinking about starting a family in the next 2 years">
+                                    <span class="starter-icon">💭</span>
+                                    <span class="starter-text">Planning for the next 2 years</span>
+                                </button>
+                                <button class="starter-card" data-prompt="What are my options for IVF?">
+                                    <span class="starter-icon">🔬</span>
+                                    <span class="starter-text">Exploring IVF options</span>
+                                </button>
+                                <button class="starter-card" data-prompt="How much does adoption cost?">
+                                    <span class="starter-icon">❤️</span>
+                                    <span class="starter-text">Understanding adoption costs</span>
+                                </button>
+                                <button class="starter-card" data-prompt="How much for nursery care and how can I budget for it?">
+                                    <span class="starter-icon">🍼</span>
+                                    <span class="starter-text">Nursery care budgeting</span>
+                                </button>
+                                <button class="starter-card" data-prompt="Can you compare different family planning methods?">
+                                    <span class="starter-icon">📊</span>
+                                    <span class="starter-text">Compare all methods</span>
+                                </button>
+                                <button class="starter-card" data-prompt="Show me where I can save money for family planning">
+                                    <span class="starter-icon">💰</span>
+                                    <span class="starter-text">Savings opportunities</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Custom Input -->
+                        <div class="custom-input-area">
+                            <input 
+                                type="text" 
+                                id="customPromptInput" 
+                                placeholder="Or ask your own question..."
+                                maxlength="500"
+                            />
+                            <button id="customPromptButton" class="primary-cta">
+                                <span>Start Journey</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Info Panel -->
+            <aside class="info-panel">
+                <div class="welcome-badge">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 2C10 2 7 5 7 8C7 9.65685 8.34315 11 10 11C11.6569 11 13 9.65685 13 8C13 5 10 2 10 2Z" fill="#8B5CF6"/>
+                        <circle cx="10" cy="14" r="1.5" fill="#8B5CF6"/>
+                        <path d="M4 8C4 8 6 10 6 12C6 13.1046 5.10457 14 4 14C2.89543 14 2 13.1046 2 12C2 10 4 8 4 8Z" fill="#A78BFA" opacity="0.6"/>
+                        <path d="M16 8C16 8 14 10 14 12C14 13.1046 14.8954 14 16 14C17.1046 14 18 13.1046 18 12C18 10 16 8 16 8Z" fill="#A78BFA" opacity="0.6"/>
+                    </svg>
+                    <span>Welcome to BloomAI</span>
+                </div>
+
+                <div class="info-block">
+                    <h4>Your Complete Journey</h4>
+                    <p>A comprehensive tool designed to support you from the start to the end of your family planning journey. We consider your location, financial situation, and personal circumstances to provide tailored guidance.</p>
+                </div>
+
+                <div class="info-block">
+                    <h4>How We Help</h4>
+                    <p>By sharing your family intentions and goals with us, we can provide personalized recommendations on costs, timelines, and financial products that match your unique situation.</p>
+                </div>
+
+                <div class="info-block ethics-block">
+                    <h4>AI Privacy & Ethics</h4>
+                    <p>Your privacy is paramount. All conversations are encrypted and secure. We use AI responsibly, with transparency and your consent at the core of everything we do. Your data is never shared without permission.</p>
+                </div>
+
+                <div class="user-indicators">
+                    <div class="indicator-item">
+                        <div class="indicator-avatar">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M8 1L9 5L13 6L10 9L11 13L8 11L5 13L6 9L3 6L7 5L8 1Z"/>
+                            </svg>
+                        </div>
+                        <span>Ethical AI practices</span>
+                    </div>
+                    <div class="indicator-item">
+                        <div class="indicator-avatar">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <rect x="3" y="6" width="10" height="7" rx="1"/>
+                                <path d="M5 6V4C5 2.34315 6.34315 1 8 1C9.65685 1 11 2.34315 11 4V6"/>
+                            </svg>
+                        </div>
+                        <span>Bank-level security</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Feature Row -->
+        <div class="feature-row">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h5>Timeline Insights</h5>
+                <p>Understand the journey ahead with clear timelines and milestones</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M3 13L9 19L21 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h5>Financial Clarity</h5>
+                <p>Get personalized cost estimates and savings recommendations</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+                <h5>Personalised Guidance</h5>
+                <p>AI-powered recommendations tailored to your unique situation</p>
+            </div>
+        </div>
+
+        <!-- Savings Insights Section -->
+        <div class="savings-section">
+            <div class="savings-header">
+                <h3>Smart Savings Opportunities</h3>
+                <p>Discover areas where you can optimize spending to reach your family planning goals faster</p>
+            </div>
+
+            <div class="savings-grid">
+                <!-- Eating Out Chart -->
+                <div class="savings-card">
+                    <div class="savings-card-header">
+                        <div class="savings-icon">🍽️</div>
+                        <div>
+                            <h4>Dining Out</h4>
+                            <p class="savings-amount">Save up to $400/month</p>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <div class="bar-chart">
+                            <div class="bar-item">
+                                <div class="bar-label">Current</div>
+                                <div class="bar-wrapper">
+                                    <div class="bar bar-current" style="width: 100%;" data-value="$600"></div>
+                                </div>
+                            </div>
+                            <div class="bar-item">
+                                <div class="bar-label">Target</div>
+                                <div class="bar-wrapper">
+                                    <div class="bar bar-target" style="width: 33%;" data-value="$200"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="savings-tip">Cook at home 4-5 times per week to save significantly</p>
+                </div>
+
+                <!-- Entertainment Chart -->
+                <div class="savings-card">
+                    <div class="savings-card-header">
+                        <div class="savings-icon">🎬</div>
+                        <div>
+                            <h4>Entertainment</h4>
+                            <p class="savings-amount">Save up to $200/month</p>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <div class="bar-chart">
+                            <div class="bar-item">
+                                <div class="bar-label">Current</div>
+                                <div class="bar-wrapper">
+                                    <div class="bar bar-current" style="width: 100%;" data-value="$300"></div>
+                                </div>
+                            </div>
+                            <div class="bar-item">
+                                <div class="bar-label">Target</div>
+                                <div class="bar-wrapper">
+                                    <div class="bar bar-target" style="width: 33%;" data-value="$100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="savings-tip">Choose free activities and streaming over premium events</p>
+                </div>
+
+                <!-- Shopping Chart -->
+                <div class="savings-card">
+                    <div class="savings-card-header">
+                        <div class="savings-icon">🛍️</div>
+                        <div>
+                            <h4>Shopping & Retail</h4>
+                            <p class="savings-amount">Save up to $300/month</p>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <div class="bar-chart">
+                            <div class="bar-item">
+                                <div class="bar-label">Current</div>
+                                <div class="bar-wrapper">
+                                    <div class="bar bar-current" style="width: 100%;" data-value="$500"></div>
+                                </div>
+                            </div>
+                            <div class="bar-item">
+                                <div class="bar-label">Target</div>
+                                <div class="bar-wrapper">
+                                    <div class="bar bar-target" style="width: 40%;" data-value="$200"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="savings-tip">Focus on essentials and use the 30-day rule for purchases</p>
+                </div>
+
+                <!-- Subscriptions Chart -->
+                <div class="savings-card">
+                    <div class="savings-card-header">
+                        <div class="savings-icon">📱</div>
+                        <div>
+                            <h4>Subscriptions</h4>
+                            <p class="savings-amount">Save up to $150/month</p>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <div class="bar-chart">
+                            <div class="bar-item">
+                                <div class="bar-label">Current</div>
+                                <div class="bar-wrapper">
+                                    <div class="bar bar-current" style="width: 100%;" data-value="$200"></div>
+                                </div>
+                            </div>
+                            <div class="bar-item">
+                                <div class="bar-label">Target</div>
+                                <div class="bar-wrapper">
+                                    <div class="bar bar-target" style="width: 25%;" data-value="$50"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="savings-tip">Cancel unused subscriptions and consolidate services</p>
+                </div>
+            </div>
+
+            <div class="savings-summary">
+                <div class="summary-card">
+                    <h4>Total Monthly Savings Potential</h4>
+                    <div class="total-amount">$1,050</div>
+                    <p>That's <strong>$12,600 per year</strong> towards your family planning goals</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conversation Page (Hidden Initially) -->
+        <div class="conversation-page hidden" id="conversationPage">
+            <div class="conversation-header">
+                <button id="backButton" class="back-button">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M12 4L6 10L12 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span>Back to home</span>
+                </button>
+            </div>
+
+            <div class="conversation-container">
+                <div id="conversationMessages" class="conversation-messages">
+                    <!-- Messages will be inserted here -->
+                </div>
+
+                <div class="conversation-input-wrapper">
+                    <div class="conversation-input">
+                        <input 
+                            type="text" 
+                            id="messageInput" 
+                            placeholder="Type your message..."
+                            maxlength="500"
+                        />
+                        <button id="sendButton" class="send-button">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M2 10L18 2L12 18L10 11L2 10Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div id="loadingIndicator" class="loading-indicator hidden">
+            <div class="spinner"></div>
+            <p>Thinking...</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
