@@ -279,3 +279,139 @@ async function sendMessage() {
     disableInput(false);
     messageInput.focus();
 }
+
+// ===================================
+// FINTECH DASHBOARD FUNCTIONALITY
+// ===================================
+
+// Dashboard data
+const dashboardData = {
+    categories: [
+        { name: 'Dining Out', current: 480, target: 160, max: 320 },
+        { name: 'Entertainment', current: 240, target: 80, max: 160 },
+        { name: 'Shopping & Retail', current: 400, target: 160, max: 240 },
+        { name: 'Subscriptions', current: 160, target: 40, max: 120 }
+    ]
+};
+
+// Initialize dashboard when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    initializeDashboard();
+});
+
+function initializeDashboard() {
+    const slider = document.getElementById('reductionSlider');
+    
+    if (!slider) return; // Dashboard not on page
+    
+    // Slider event listener
+    slider.addEventListener('input', (e) => {
+        const percentage = parseInt(e.target.value);
+        updateDashboard(percentage);
+    });
+    
+    // Animate progress bars on load
+    setTimeout(() => {
+        animateProgressBars();
+    }, 300);
+    
+    // Initial update
+    updateDashboard(40);
+}
+
+function updateDashboard(reductionPercentage) {
+    // Update slider value display
+    const sliderValue = document.getElementById('sliderValue');
+    if (sliderValue) {
+        sliderValue.textContent = `${reductionPercentage}%`;
+    }
+    
+    let totalSavings = 0;
+    
+    // Update each category
+    dashboardData.categories.forEach((category, index) => {
+        const reduction = reductionPercentage / 100;
+        const difference = category.current - category.target;
+        const actualSavings = difference * reduction;
+        const newCurrent = category.current - actualSavings;
+        
+        totalSavings += actualSavings;
+        
+        // Update savings value
+        const savingsElements = document.querySelectorAll('.savings-value');
+        if (savingsElements[index]) {
+            const maxSavings = parseFloat(savingsElements[index].getAttribute('data-max'));
+            const displaySavings = Math.round(maxSavings * reduction);
+            savingsElements[index].textContent = `£${displaySavings}`;
+        }
+        
+        // Update progress bar
+        const progressFills = document.querySelectorAll('.progress-fill');
+        if (progressFills[index]) {
+            const currentValue = parseFloat(progressFills[index].getAttribute('data-current'));
+            const targetValue = parseFloat(progressFills[index].parentElement.querySelector('.target-marker').getAttribute('data-target'));
+            
+            const newWidth = ((newCurrent / currentValue) * 100);
+            progressFills[index].style.width = `${newWidth}%`;
+            
+            // Update color based on progress
+            if (newCurrent <= targetValue) {
+                progressFills[index].classList.remove('current-fill');
+                progressFills[index].classList.add('at-target');
+            } else if (newCurrent <= targetValue * 1.2) {
+                progressFills[index].classList.remove('current-fill', 'at-target');
+                progressFills[index].classList.add('under-target');
+            } else {
+                progressFills[index].classList.remove('under-target', 'at-target');
+                progressFills[index].classList.add('current-fill');
+            }
+        }
+    });
+    
+    // Update total savings
+    const totalSavingsElement = document.getElementById('totalSavings');
+    const annualSavingsElement = document.getElementById('annualSavings');
+    
+    if (totalSavingsElement) {
+        totalSavingsElement.textContent = `£${Math.round(totalSavings).toLocaleString()}`;
+    }
+    
+    if (annualSavingsElement) {
+        const annual = Math.round(totalSavings * 12);
+        annualSavingsElement.textContent = `£${annual.toLocaleString()} per year`;
+    }
+}
+
+function animateProgressBars() {
+    const progressFills = document.querySelectorAll('.progress-fill');
+    
+    progressFills.forEach((fill, index) => {
+        // Trigger reflow to restart animation
+        fill.style.animation = 'none';
+        setTimeout(() => {
+            fill.style.animation = '';
+        }, 10);
+    });
+}
+
+// Refresh button functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const refreshButton = document.querySelector('.dashboard-header .icon-button');
+    
+    if (refreshButton) {
+        refreshButton.addEventListener('click', () => {
+            // Reset to default values
+            const slider = document.getElementById('reductionSlider');
+            if (slider) {
+                slider.value = 40;
+                updateDashboard(40);
+            }
+            
+            // Animate refresh
+            refreshButton.style.transform = 'rotate(360deg)';
+            setTimeout(() => {
+                refreshButton.style.transform = 'rotate(0deg)';
+            }, 600);
+        });
+    }
+});
