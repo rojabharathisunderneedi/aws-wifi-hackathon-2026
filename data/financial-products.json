@@ -1,0 +1,95 @@
+{
+  "products": [
+    {
+      "id": "high_yield_savings_001",
+      "type": "savings_account",
+      "name": "Family Planning Savings Account",
+      "interestRate": 0.045,
+      "minimumBalance": 1000,
+      "features": [
+        "4.5% APY",
+        "No monthly fees",
+        "Goal tracking tools",
+        "Automatic transfers"
+      ],
+      "eligibility": {
+        "minIncome": 30000,
+        "minAge": 18
+      },
+      "recommendedFor": ["short_term", "medium_term"]
+    },
+    {
+      "id": "investment_529_001",
+      "type": "investment",
+      "name": "Future Family 529 Plan",
+      "expectedReturn": 0.07,
+      "riskLevel": "moderate",
+      "features": [
+        "Tax-advantaged growth",
+        "Flexible contributions",
+        "Education expense coverage"
+      ],
+      "eligibility": {
+        "minIncome": 50000,
+        "minAge": 21
+      },
+      "recommendedFor": ["long_term"]
+    },
+    {
+      "id": "personal_loan_001",
+      "type": "loan",
+      "name": "Family Planning Personal Loan",
+      "amountRange": {"min": 5000, "max": 50000},
+      "interestRate": 0.089,
+      "termMonths": [24, 36, 48, 60],
+      "features": [
+        "Fixed rate 8.9% APR",
+        "No prepayment penalty",
+        "Fast approval",
+        "Flexible terms"
+      ],
+      "eligibility": {
+        "minIncome": 40000,
+        "minCreditScore": 650,
+        "minAge": 21
+      },
+      "recommendedFor": ["ivf", "adoption", "surrogacy"]
+    },
+    {
+      "id": "high_yield_savings_002",
+      "type": "savings_account",
+      "name": "Premium Savings Account",
+      "interestRate": 0.05,
+      "minimumBalance": 5000,
+      "features": [
+        "5.0% APY",
+        "No monthly fees",
+        "Priority customer service",
+        "Mobile app access"
+      ],
+      "eligibility": {
+        "minIncome": 60000,
+        "minAge": 18
+      },
+      "recommendedFor": ["short_term", "medium_term"]
+    },
+    {
+      "id": "investment_mutual_fund_001",
+      "type": "investment",
+      "name": "Balanced Growth Fund",
+      "expectedReturn": 0.08,
+      "riskLevel": "moderate",
+      "features": [
+        "Diversified portfolio",
+        "Professional management",
+        "Quarterly rebalancing",
+        "Low expense ratio"
+      ],
+      "eligibility": {
+        "minIncome": 45000,
+        "minAge": 21
+      },
+      "recommendedFor": ["medium_term", "long_term"]
+    }
+  ]
+}

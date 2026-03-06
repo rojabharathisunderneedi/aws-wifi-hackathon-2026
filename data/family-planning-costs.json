@@ -1,0 +1,93 @@
+{
+  "methods": {
+    "ivf": {
+      "name": "In Vitro Fertilization (IVF)",
+      "costRange": {
+        "min": 12000,
+        "max": 25000,
+        "currency": "USD",
+        "perCycle": true
+      },
+      "averageCycles": 2.5,
+      "timeline": {
+        "preparation": "2-3 months",
+        "perCycle": "4-6 weeks",
+        "total": "6-12 months"
+      },
+      "locationFactors": {
+        "urban": 1.2,
+        "suburban": 1.0,
+        "rural": 0.85
+      },
+      "additionalCosts": {
+        "medications": {"min": 3000, "max": 7000},
+        "testing": {"min": 1500, "max": 3000},
+        "storage": {"annual": 500}
+      },
+      "successRates": {
+        "under30": 0.45,
+        "30to35": 0.38,
+        "35to40": 0.28,
+        "over40": 0.15
+      }
+    },
+    "adoption": {
+      "name": "Adoption",
+      "costRange": {
+        "domestic": {"min": 20000, "max": 45000},
+        "international": {"min": 30000, "max": 60000},
+        "foster": {"min": 0, "max": 2500},
+        "currency": "USD"
+      },
+      "timeline": {
+        "domestic": "1-3 years",
+        "international": "2-4 years",
+        "foster": "6-18 months"
+      },
+      "breakdown": {
+        "agencyFees": {"min": 15000, "max": 30000},
+        "legal": {"min": 2500, "max": 8000},
+        "travel": {"min": 2000, "max": 10000},
+        "homeStudy": {"min": 1000, "max": 3000}
+      }
+    },
+    "natural": {
+      "name": "Natural Conception",
+      "costRange": {
+        "prenatal": {"min": 2000, "max": 3000},
+        "delivery": {"min": 5000, "max": 15000},
+        "currency": "USD"
+      },
+      "timeline": {
+        "conception": "variable",
+        "pregnancy": "9 months",
+        "total": "9-18 months"
+      },
+      "insuranceCoverage": {
+        "typical": 0.80,
+        "withDeductible": 5000
+      }
+    },
+    "surrogacy": {
+      "name": "Surrogacy",
+      "costRange": {
+        "min": 90000,
+        "max": 150000,
+        "currency": "USD"
+      },
+      "timeline": {
+        "findingSurrogate": "3-6 months",
+        "legal": "2-3 months",
+        "pregnancy": "9 months",
+        "total": "14-18 months"
+      },
+      "breakdown": {
+        "surrogateCompensation": {"min": 40000, "max": 60000},
+        "agencyFees": {"min": 20000, "max": 30000},
+        "legal": {"min": 10000, "max": 15000},
+        "medical": {"min": 15000, "max": 30000},
+        "insurance": {"min": 5000, "max": 15000}
+      }
+    }
+  }
+}

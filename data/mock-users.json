@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "userId": "user_001",
+      "age": 32,
+      "income": 85000,
+      "location": "Seattle, WA",
+      "gender": "female",
+      "createdAt": "2024-01-15T10:30:00Z"
+    },
+    {
+      "userId": "user_002",
+      "age": 28,
+      "income": 72000,
+      "location": "Austin, TX",
+      "gender": "male",
+      "createdAt": "2024-01-16T09:15:00Z"
+    },
+    {
+      "userId": "user_003",
+      "age": 35,
+      "income": 95000,
+      "location": "Boston, MA",
+      "gender": "non-binary",
+      "createdAt": "2024-01-17T14:20:00Z"
+    },
+    {
+      "userId": "user_004",
+      "age": 29,
+      "income": 68000,
+      "location": "Denver, CO",
+      "gender": "female",
+      "createdAt": "2024-01-18T11:45:00Z"
+    },
+    {
+      "userId": "user_005",
+      "age": 38,
+      "income": 110000,
+      "location": "San Francisco, CA",
+      "gender": "male",
+      "createdAt": "2024-01-19T16:00:00Z"
+    }
+  ]
+}
