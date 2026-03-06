@@ -2,11 +2,14 @@
 
 ## Overview
 
-This implementation plan breaks down the Bloom AI family planning financial advisor into discrete coding tasks optimized for a 4-hour hackathon delivery. The plan follows the AWS serverless architecture with Lambda, API Gateway, DynamoDB, S3, and Bedrock. Tasks are organized to enable parallel development across team members while ensuring incremental validation of core functionality.
+This implementation plan breaks down the Bloom AI family planning financial advisor into discrete coding tasks optimized for a 4-hour hackathon delivery. The plan follows the AWS serverless architecture with Lambda, API Gateway, DynamoDB, S3, and Bedrock. Tasks are organized into Backend and Frontend sections to enable parallel development across team members.
 
-The implementation uses Python 3.12 for Lambda functions and focuses on delivering one complete user journey: landing page → conversation → cost estimates → financial recommendations.
+**Backend**: Python 3.12 Lambda functions, AWS services (DynamoDB, S3, Bedrock, API Gateway)
+**Frontend**: HTML/CSS/JavaScript landing page and conversation UI
 
-## Tasks
+The implementation focuses on delivering one complete user journey: landing page → conversation → cost estimates → financial recommendations.
+
+## Backend Tasks
 
 - [ ] 1. Set up AWS infrastructure and data preparation
   - [ ] 1.1 Create and configure DynamoDB table with schema
@@ -256,6 +259,8 @@ The implementation uses Python 3.12 for Lambda functions and focuses on deliveri
 - [ ] 10. Checkpoint - Test backend integration
   - Ensure all tests pass, ask the user if questions arise.
 
+## Frontend Tasks
+
 - [ ] 11. Build frontend landing page and conversation UI
   - [ ] 11.1 Create landing page HTML structure
     - Create `index.html` with landing page layout
@@ -292,6 +297,8 @@ The implementation uses Python 3.12 for Lambda functions and focuses on deliveri
     - Test that landing page provides text input field
     - Verify input field is functional
     - _Requirements: 1.4_
+
+## Integration & Testing Tasks
 
 - [ ] 12. Implement session resumption and context preservation
   - [ ] 12.1 Implement conversation history retrieval endpoint
@@ -424,6 +431,9 @@ The implementation uses Python 3.12 for Lambda functions and focuses on deliveri
 
 ## Notes
 
+- **Backend Tasks**: Tasks 1-10 (AWS infrastructure, Lambda functions, API endpoints, data integration)
+- **Frontend Tasks**: Task 11 (Landing page, conversation UI, JavaScript integration)
+- **Integration Tasks**: Tasks 12-17 (Session resumption, error handling, security, testing, demo prep)
 - Tasks marked with `*` are optional property-based and unit tests that can be skipped for faster MVP delivery
 - Each task references specific requirements for traceability
 - Checkpoints ensure incremental validation at critical integration points
