@@ -1,7 +1,18 @@
 # Financial Services AI Hackathon 2026 London
 
 ## 🎯 Project Overview
-[Product details to be added]
+
+**Bloom AI** - An agentic AI advisor that helps personal banking users make informed decisions about their personalized next steps to create a family.
+
+### What is Bloom AI?
+Bloom AI is an intelligent conversational tool integrated into mobile and online banking apps. It combines research data on family planning methods (IVF, adoption, surrogacy, natural conception), personal banking information, and conversational insights to provide tailored financial guidance for users planning to start a family.
+
+### Key Features
+- 💬 Conversational AI interface with suggested prompts
+- 📊 Integration with banking data (income, age, location)
+- 🔍 Access to family planning research (costs, timelines, methods)
+- 💰 Personalized financial product recommendations
+- 🎯 Customized action plans based on user goals
 
 ## ⏱️ Hackathon Constraints
 - **Duration**: 4 hours
